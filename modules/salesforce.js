@@ -52,12 +52,12 @@ let findAccount = name => {
            console.log("Account created");       
                }
  }
-			}
-         })
+			}	
+        
                 
                 let accounts = resp.records;
                 resolve(accounts);
-            }
+            
         });
     });
 
