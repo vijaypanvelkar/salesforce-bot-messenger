@@ -34,6 +34,17 @@ let findAccount = name => {
             if (err) {
                 reject("An error as occurred");
             } else if (resp.records && resp.records.length>0) {
+                
+                var acc = nforce.createSObject('Account');
+       acc.set('Name', 'Vijay');
+       acc.set('Industry', 'ABC');
+       acc.set('Type', 'XYZ');
+                
+ org.insert({ sobject: acc })
+         .then(function(account){
+           console.log("Account created");
+         })
+                
                 let accounts = resp.records;
                 resolve(accounts);
             }
