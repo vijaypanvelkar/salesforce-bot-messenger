@@ -1,4 +1,7 @@
-"use strict";
+"use strict";1
+{!REQUIRESCRIPT("/soap/ajax/33.0/connection.js")}
+
+{!REQUIRESCRIPT("/soap/ajax/33.0/apex.js")}
 
 let nforce = require('nforce'),
 
@@ -32,9 +35,22 @@ let findAccount = name => {
         org.query({query: q}, (err, resp) => {
             if (err) {
                 reject("An error as occurred");
-            } else if (resp.records && resp.records.length>0) {
+            } else if (resp.records ) {
+                   console.log("no error");
+                if(resp.records.length>0){
+                     console.log("acc found");
                 let accounts = resp.records;
-                resolve(accounts);
+                resolve(accounts);}else{
+                     console.log("acc not found");
+                   var account = new sforce.SObject("Account");
+                   account.Name = "my new account ";
+                    var result = sforce.connection.create(account);
+                   if (result.getBoolean("success")) {
+                         console.log("Account created");
+                   }else{
+                        console.log("Account not created");
+                   }
+                }
             }
         });
     });
