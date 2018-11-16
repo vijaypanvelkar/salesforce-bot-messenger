@@ -33,6 +33,7 @@ let findAccount = name => {
         org.query({query: q}, (err, resp) => {
             if (err) {
                 reject("An error as occurred");
+                console.log("Account An error as occurred");
             } else if (resp.records && resp.records.length>0) {
                 
                 var acc = nforce.createSObject('Account');
