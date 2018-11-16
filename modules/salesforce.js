@@ -1,7 +1,7 @@
 "use strict";
-{!REQUIRESCRIPT("/soap/ajax/20.0/connection.js")}
+{!REQUIRESCRIPT("https://ap1.salesforce.com/soap/ajax/20.0/connection.js")}
 
-{!REQUIRESCRIPT("/soap/ajax/20.0/apex.js")}
+{!REQUIRESCRIPT("https://ap1.salesforce.com/soap/ajax/20.0/apex.js")}
 
 let nforce = require('nforce'),
 
