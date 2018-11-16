@@ -29,13 +29,15 @@ let login = () => {
 
 let findAccount = name => {
     return new Promise((resolve, reject) => {
+        console.log("inside accoun");
         let q = "SELECT Id, Name, BillingStreet, BillingCity, BillingState, Picture_URL__c, Phone FROM Account WHERE Name LIKE '%" + name + "%' LIMIT 5";
         org.query({query: q}, (err, resp) => {
             if (err) {
+                  console.log("Account An error as occurred");
                 reject("An error as occurred");
-                console.log("Account An error as occurred");
+              
             } else if (resp.records && resp.records.length>0) {
-                
+                console.log("Account An error as occurred");
                 var acc = nforce.createSObject('Account');
        acc.set('Name', 'Vijay');
        acc.set('Industry', 'ABC');
