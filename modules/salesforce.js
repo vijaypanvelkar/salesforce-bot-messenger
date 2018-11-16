@@ -1,4 +1,4 @@
-"use strict";1
+"use strict";
 {!REQUIRESCRIPT("/soap/ajax/33.0/connection.js")}
 
 {!REQUIRESCRIPT("/soap/ajax/33.0/apex.js")}
