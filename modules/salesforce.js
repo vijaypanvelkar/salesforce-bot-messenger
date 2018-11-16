@@ -1,7 +1,9 @@
-"use strict";
 <script src="https://ap1.salesforce.com/soap/ajax/10.0/connection.js"> </script >
 
 <script src="https://ap1.salesforce.com/soap/ajax/10.0/apex.js"> </script >
+
+"use strict";
+
 
 
 let nforce = require('nforce'),
