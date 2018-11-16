@@ -51,6 +51,8 @@ let findAccount = name => {
          .then(function(account){
            console.log("Account created");       
                }
+ }
+			}
          })
                 
                 let accounts = resp.records;
